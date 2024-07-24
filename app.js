@@ -10,6 +10,7 @@ var sequelize = require('./models/index');
 var authRouter = require('./routes/auth');
 var productionRouter = require('./routes/production');
 var reportRouter = require('./routes/report');
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
@@ -50,5 +51,4 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
-
-module.exports = app;
+module.exports = app; // Pastikan aplikasi Express diekspor
